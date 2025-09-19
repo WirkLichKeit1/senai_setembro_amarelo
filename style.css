@@ -4,14 +4,14 @@ body{
 }
 
 h1{
-	color:brown;
+	color:blue;
 	font-size: large;
 	font-weight: bolder;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 footer{
-	color: darkgoldenrod;
+	color: black;
 	font-size: xx-small;
 	font-weight: lighter;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
