@@ -2,16 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <script defer src="/_vercel/insights/script.js"></script> -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Setembro Amarelo - Senai Cabo</title>
-    <meta name="description" content="High-performance HTML based website template."/>
+    <link rel="stylesheet" href="style.css">
+    <title>Setembro Amarelo - SENAI Cabo</title>
+    <script>
+      function carregarMensagem()
+      {
+        fetch("https://setembroamarelo-delta.vercel.app/")
+        .then(response=>response.json())
+        .then(data=>{
+            let mensagem = data.mensagem;
+            document.getElementById("mensagem").innerHTML = mensagem;
+        })
+        .catch(error=>console.log(error));
+      }
+    </script>
   </head>
-  <body>
-    hello world
+  <body onload="carregarMensagem()">
+    <img src="https://www.rn.senai.br/wp-content/uploads/2024/09/SENAI_Port_com_assinatura_cor-2.png">
+    <h1>Setembro Amarelo - SENAI Cabo</h1>
+    <div class="card" id="mensagem">
+      [Aguardando Mensagem]
+    </div>
+    <footer>
+      <p>projeto desenvolvido pelas turmas do curso Técnico em Desenvolvimento de Sistemas</p>
+      <p>TEC.206.005, TEC.206.009</p>
+      <p>Professor Givanio Melo</p>
+    </footer>
   </body>
 </html>
